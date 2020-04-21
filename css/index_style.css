@@ -24,7 +24,7 @@ body {
   background-color: black;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.25fr 0.5fr 0.5fr 0.5fr 1fr 0.5fr 0.10fr;
+  grid-template-rows: auto 0.5fr 0.5fr 0.5fr 1fr 0.5fr auto;
   margin: 0;
   padding: 0;
   scroll-snap-align: start;
