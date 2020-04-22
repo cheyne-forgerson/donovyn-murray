@@ -17,13 +17,26 @@ document.getElementById("left-arrow").onclick = function() {infoOpenClose()};
 function infoOpenClose() {
   if (document.getElementById("left-arrow").className == "left-arrow"){
     document.getElementById("info").className = "info-on";
-    document.getElementById("left-arrow").className = "right-arrow";
+    document.getElementById("left-arrow").className = "left-arrow-fade";
+    setTimeout(rightArrowClass, 750);
+
   }
   else {
     document.getElementById("info").className = "info-off";
-    document.getElementById("left-arrow").className = "left-arrow";
+    document.getElementById("left-arrow").className = "right-arrow-fade";
+    setTimeout(leftArrowClass, 750);
   }
 }
+
+function leftArrowClass() {
+  document.getElementById("left-arrow").className = "left-arrow";
+}
+
+function rightArrowClass () {
+  document.getElementById("left-arrow").className = "right-arrow";
+}
+
+
 
 
 
