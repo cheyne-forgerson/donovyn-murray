@@ -20,7 +20,7 @@ body {
 
 .hero-header {
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   -webkit-width: 100vw;
   -webkit-height: 100vh;
   background-color: black;
@@ -81,11 +81,14 @@ body {
   border: none;
   width: 100%;
   transition: ease 0.75s;
+  z-index: 2;
 }
 
 .right-arrow {
-  grid-column: 4 / 5;
+  grid-column: 1 / 2;
   grid-row: 3 / 4;
+  margin-left: 10%;
+  justify-content: flex-end;
   padding: 0;
   background: none;
   border: none;
