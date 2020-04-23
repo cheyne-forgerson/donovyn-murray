@@ -3,6 +3,7 @@
 // var facebookIcon = document.getElementById("facebook");
 // var navBtn = document.getElementById("nav-btn");
 
+
 // -------VIEWPORT HEIGHT-------
 // We listen to the resize event
 window.addEventListener('resize', () => {
@@ -13,26 +14,20 @@ let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
 
-document.getElementById("nav-btn").onclick = function() {navOpen()};
-
-function navOpen() {
-  document.getElementById("email").className = "email-on";
-  document.getElementById("ig").className = "ig-on";
-  document.getElementById("facebook").className = "facebook-on";
-}
-
 document.getElementById("left-arrow").onclick = function() {infoOpenClose()};
 
 function infoOpenClose() {
   if (document.getElementById("left-arrow").className == "left-arrow"){
     document.getElementById("info").className = "info-on";
     document.getElementById("left-arrow").className = "left-arrow-fade";
+    document.getElementById("nav-btn-img").className = "nav-btn-img-off";
     setTimeout(rightArrowClass, 500);
 
   }
   else {
     document.getElementById("info").className = "info-off";
     document.getElementById("left-arrow").className = "right-arrow-fade";
+    document.getElementById("nav-btn-img").className = "nav-btn-img";
     setTimeout(leftArrowClass, 500);
   }
 }
@@ -45,13 +40,81 @@ function rightArrowClass () {
   document.getElementById("left-arrow").className = "right-arrow";
 }
 
+document.getElementById("nav-btn").onclick = function() {socialOpenClose()};
 
+function socialOpenClose() {
+  if (document.getElementById("social").className == "social-off") {
+    document.getElementById("social").className = "social-on";
+    document.getElementById("nav-btn-img").className = "nav-btn-img-rotate";
+    document.getElementById("left-arrow").className = "left-arrow-fade";
+  }
+  else {
+    document.getElementById("social").className = "social-off";
+    document.getElementById("nav-btn-img").className = "nav-btn-img";
+    document.getElementById("left-arrow").className = "left-arrow";
+  }
+}
 
+// Clicked Email Button
+document.getElementById("email").onclick = function() {clickedEmail()};
 
+function clickedEmail() {
+  setTimeout(emailRed, 0);
+  setTimeout(emailGray, 750);
+}
 
-// navBtn.onclick = function() {toggleOff()};
-//   function toggleOff(){
-//     emailIcon.classList.toggle("hidden");
-//     igIcon.classList.toggle("hidden");
-//     facebookIcon.classList.toggle("hidden");
-//   }
+function emailRed() {
+  document.getElementById("email-img").className = "email-img-red";
+}
+
+function emailGray() {
+  document.getElementById("email-img").className = "email-img";
+}
+
+// Clicked IG Button
+document.getElementById("ig").onclick = function() {clickedIG()};
+
+function clickedIG() {
+  setTimeout(igRed, 0);
+  setTimeout(igGray, 750);
+}
+
+function igRed() {
+  document.getElementById("ig-img").className = "ig-img-red";
+}
+
+function igGray() {
+  document.getElementById("ig-img").className = "ig-img";
+}
+
+// Clicked Facebook Button
+document.getElementById("facebook").onclick = function() {clickedFacebook()};
+
+function clickedFacebook() {
+  setTimeout(facebookRed, 0);
+  setTimeout(facebookGray, 750);
+}
+
+function facebookRed() {
+  document.getElementById("facebook-img").className = "facebook-img-red";
+}
+
+function facebookGray() {
+  document.getElementById("facebook-img").className = "facebook-img";
+}
+
+// Clicked LinkedIn Button
+document.getElementById("linkedin").onclick = function() {clickedLinkedin()};
+
+function clickedLinkedin() {
+  setTimeout(linkedinRed, 0);
+  setTimeout(linkedinGray, 750);
+}
+
+function linkedinRed() {
+  document.getElementById("linkedin-img").className = "linkedin-img-red";
+}
+
+function linkedinGray() {
+  document.getElementById("linkedin-img").className = "linkedin-img";
+}
