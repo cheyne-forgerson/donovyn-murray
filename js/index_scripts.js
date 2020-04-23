@@ -19,6 +19,7 @@ document.getElementById("left-arrow").onclick = function() {infoOpenClose()};
 function infoOpenClose() {
   if (document.getElementById("left-arrow").className == "left-arrow"){
     document.getElementById("info").className = "info-on";
+    document.getElementById("info-grid").className = "info-grid";
     document.getElementById("left-arrow").className = "left-arrow-fade";
     document.getElementById("nav-btn-img").className = "nav-btn-img-off";
     setTimeout(rightArrowClass, 500);
@@ -29,7 +30,12 @@ function infoOpenClose() {
     document.getElementById("left-arrow").className = "right-arrow-fade";
     document.getElementById("nav-btn-img").className = "nav-btn-img";
     setTimeout(leftArrowClass, 500);
+    setTimeout(infoGridOff, 1000);
   }
+}
+
+function infoGridOff() {
+  document.getElementById("info-grid").className = "info-grid-off";
 }
 
 function leftArrowClass() {

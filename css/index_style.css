@@ -149,6 +149,16 @@ body {
   padding: 0;
 }
 
+.info-grid-off {
+  display: grid;
+  grid-template-columns: 0.15fr 1fr 1fr 0.15fr;
+  grid-template-rows: 0.15fr 1fr 1fr 1fr 1fr 1fr 1fr 0.15fr;
+  margin: 0;
+  padding: 5%;
+  width: 0%;
+  height: 100%;
+}
+
 .info-grid {
   display: grid;
   grid-template-columns: 0.15fr 1fr 1fr 0.15fr;
